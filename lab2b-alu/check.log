@@ -1,0 +1,84 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.42+30 (git sha1 6c8ae44ae, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)
+
+-- Parsing `lc4_alu.v' using frontend ` -vlog2k' --
+
+1. Executing Verilog-2005 frontend: lc4_alu.v
+Parsing Verilog input from `lc4_alu.v' to AST representation.
+Storing AST representation for module `$abstract\lc4_alu'.
+Successfully finished Verilog frontend.
+
+-- Parsing `lc4_divider.v' using frontend ` -vlog2k' --
+
+2. Executing Verilog-2005 frontend: lc4_divider.v
+Parsing Verilog input from `lc4_divider.v' to AST representation.
+Storing AST representation for module `$abstract\lc4_divider'.
+Storing AST representation for module `$abstract\lc4_divider_one_iter'.
+Successfully finished Verilog frontend.
+
+-- Parsing `lc4_cla.v' using frontend ` -vlog2k' --
+
+3. Executing Verilog-2005 frontend: lc4_cla.v
+Parsing Verilog input from `lc4_cla.v' to AST representation.
+Storing AST representation for module `$abstract\gp1'.
+Storing AST representation for module `$abstract\gp4'.
+Storing AST representation for module `$abstract\cla16'.
+Storing AST representation for module `$abstract\gpn'.
+Successfully finished Verilog frontend.
+
+-- Running command `check; hierarchy -check; flatten; check -assert' --
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module $abstract\gpn...
+Checking module $abstract\cla16...
+Checking module $abstract\gp4...
+Checking module $abstract\gp1...
+Checking module $abstract\lc4_divider_one_iter...
+Checking module $abstract\lc4_divider...
+Checking module $abstract\lc4_alu...
+Found and reported 0 problems.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Executing AST frontend in derive mode using pre-parsed AST for module `\gpn'.
+Generating RTLIL representation for module `\gpn'.
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\cla16'.
+Generating RTLIL representation for module `\cla16'.
+
+5.3. Executing AST frontend in derive mode using pre-parsed AST for module `\gp4'.
+Generating RTLIL representation for module `\gp4'.
+
+5.4. Executing AST frontend in derive mode using pre-parsed AST for module `\gp1'.
+Generating RTLIL representation for module `\gp1'.
+
+5.5. Executing AST frontend in derive mode using pre-parsed AST for module `\lc4_divider_one_iter'.
+Generating RTLIL representation for module `\lc4_divider_one_iter'.
+
+5.6. Executing AST frontend in derive mode using pre-parsed AST for module `\lc4_divider'.
+Generating RTLIL representation for module `\lc4_divider'.
+
+5.7. Executing AST frontend in derive mode using pre-parsed AST for module `\lc4_alu'.
+Generating RTLIL representation for module `\lc4_alu'.
+
+6. Executing FLATTEN pass (flatten design).
+<suppressed ~39 debug messages>
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module lc4_alu...
+Checking module lc4_divider...
+Checking module lc4_divider_one_iter...
+Checking module gp1...
+Checking module gp4...
+Checking module cla16...
+Checking module gpn...
+Found and reported 0 problems.
+
+End of script. Logfile hash: 025b2b231c, CPU: user 0.09s system 0.01s, MEM: 23.88 MB peak
+Yosys 0.42+30 (git sha1 6c8ae44ae, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)
+Time spent: 74% 2x check (0 sec), 16% 1x hierarchy (0 sec), ...

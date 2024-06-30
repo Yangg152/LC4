@@ -1,0 +1,103 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.42+30 (git sha1 6c8ae44ae, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)
+
+-- Parsing `lc4_regfile.v' using frontend ` -vlog2k' --
+
+1. Executing Verilog-2005 frontend: lc4_regfile.v
+Parsing Verilog input from `lc4_regfile.v' to AST representation.
+Storing AST representation for module `$abstract\lc4_regfile'.
+Successfully finished Verilog frontend.
+
+-- Parsing `register.v' using frontend ` -vlog2k' --
+
+2. Executing Verilog-2005 frontend: register.v
+Parsing Verilog input from `register.v' to AST representation.
+Storing AST representation for module `$abstract\Nbit_reg'.
+Successfully finished Verilog frontend.
+
+-- Running command `check; hierarchy -check; flatten; check -assert' --
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module $abstract\Nbit_reg...
+Checking module $abstract\lc4_regfile...
+Found and reported 0 problems.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Executing AST frontend in derive mode using pre-parsed AST for module `\Nbit_reg'.
+Generating RTLIL representation for module `\Nbit_reg'.
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\lc4_regfile'.
+Generating RTLIL representation for module `\lc4_regfile'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+
+4.3. Executing AST frontend in derive mode using pre-parsed AST for module `\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Generating RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Reprocessing module lc4_regfile because instantiated module $paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg has become available.
+Generating RTLIL representation for module `\lc4_regfile'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+Parameter 1 (\n) = 16
+Parameter 2 (\r) = 0
+Found cached RTLIL representation for module `$paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg'.
+
+5. Executing FLATTEN pass (flatten design).
+<suppressed ~8 debug messages>
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module lc4_regfile...
+Checking module $paramod$190f0e180f494e83c0fd00a86cf5f1e3457e0043\Nbit_reg...
+Checking module Nbit_reg...
+Found and reported 0 problems.
+
+End of script. Logfile hash: 027b9eae24, CPU: user 0.02s system 0.00s, MEM: 13.12 MB peak
+Yosys 0.42+30 (git sha1 6c8ae44ae, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)
+Time spent: 54% 1x hierarchy (0 sec), 32% 2x check (0 sec), ...

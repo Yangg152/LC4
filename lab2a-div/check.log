@@ -1,0 +1,42 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.42+30 (git sha1 6c8ae44ae, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)
+
+-- Parsing `lc4_divider.v' using frontend ` -vlog2k' --
+
+1. Executing Verilog-2005 frontend: lc4_divider.v
+Parsing Verilog input from `lc4_divider.v' to AST representation.
+Storing AST representation for module `$abstract\lc4_divider'.
+Storing AST representation for module `$abstract\lc4_divider_one_iter'.
+Successfully finished Verilog frontend.
+
+-- Running command `check; hierarchy -check; flatten; check -assert' --
+
+2. Executing CHECK pass (checking for obvious problems).
+Checking module $abstract\lc4_divider_one_iter...
+Checking module $abstract\lc4_divider...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Executing AST frontend in derive mode using pre-parsed AST for module `\lc4_divider_one_iter'.
+Generating RTLIL representation for module `\lc4_divider_one_iter'.
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\lc4_divider'.
+Generating RTLIL representation for module `\lc4_divider'.
+
+4. Executing FLATTEN pass (flatten design).
+<suppressed ~16 debug messages>
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module lc4_divider...
+Checking module lc4_divider_one_iter...
+Found and reported 0 problems.
+
+End of script. Logfile hash: 892300c53f, CPU: user 0.05s system 0.01s, MEM: 18.88 MB peak
+Yosys 0.42+30 (git sha1 6c8ae44ae, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)
+Time spent: 81% 2x check (0 sec), 13% 1x hierarchy (0 sec), ...
